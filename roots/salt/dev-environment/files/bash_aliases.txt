@@ -1,0 +1,2 @@
+alias ll='ls -al'
+alias salt='sudo salt-call --local -l debug '
