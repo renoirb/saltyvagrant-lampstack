@@ -1,6 +1,7 @@
 'base':
   '*':
     - mysql.server
-    - git
     - php.apache
+    - php.latest
+    - git
     - dev-environment
