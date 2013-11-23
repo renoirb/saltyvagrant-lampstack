@@ -17,7 +17,7 @@ include:
 disable-default:
   cmd:
     - wait
-    - name: a2dissite default
+    - name: a2dissite 000-default
 
 /etc/apache2/sites-available/workspace.conf:
   file.managed:
@@ -28,3 +28,8 @@ disable-default:
       - cmd: disable-default
     - require_in:
       - cmd: vhost-exist
+
+a2ensite vhost.workspace:
+  cmd:
+    - wait
+    - unless: test ! -L /etc/apache2/sites-enabled/vhost.workspace.conf
