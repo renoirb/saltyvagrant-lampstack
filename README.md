@@ -13,8 +13,8 @@ More to come soon.
 
 To boot, or stop working.
 
-  vagrant up
-  vagrant halt
+    vagrant up
+    vagrant halt
 
 First bootup is longer because it installs everything, see in 
 file `saltstack/roots/salt/top.sls` this is where Salt stack starts working from.
