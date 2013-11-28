@@ -6,12 +6,14 @@ All files in project/web will be exposed to the Virtual Machine's web server.
 
 IP Address is described in the `Vagrantfile`, if you have networking problem, erase lines 4-7 and reload.
 
-More to come soon.
-
 
 ## To use
 
-To boot, or stop working.
+1. Make sure you have **salty vagrant** as a Vagrant plugin, or run
+
+    vagrant gem install vagrant-salt
+    
+2. Boot up the VM
 
     vagrant up
     vagrant halt
