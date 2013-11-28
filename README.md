@@ -20,7 +20,7 @@ The IP Address is described in the `Vagrantfile`, if you have networking problem
 ## To use
 
 1. Have [Vagrant](http://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/) installed
-1. Make sure you have **salty vagrant** as a Vagrant plugin, or run
+2. Make sure you have **salty vagrant** as a Vagrant plugin, or run
 
 
     vagrant gem install vagrant-salt
@@ -30,7 +30,6 @@ The IP Address is described in the `Vagrantfile`, if you have networking problem
 
 
     vagrant up
-    vagrant halt
 
 
 First bootup is longer because it installs everything, see in 
