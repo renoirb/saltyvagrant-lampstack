@@ -25,6 +25,7 @@ The IP Address is described in the `Vagrantfile`, if you have networking problem
 
     vagrant gem install vagrant-salt
 
+
 2. Boot up the VM
 
 
