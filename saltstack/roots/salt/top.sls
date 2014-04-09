@@ -1,9 +1,9 @@
 'base':
   '*':
-    - mysql.server
-    - php.apache
-    - php.latest
-    - php.composer
     - git
+    - php.latest
+    - php.mysql
     - dev-environment
-    - contributor-dashboard
+    - php.composer
+    - mysql.server
+    - mysql.salt_local_module

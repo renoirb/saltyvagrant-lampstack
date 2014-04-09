@@ -14,22 +14,15 @@ include:
   file.symlink:
     - target: /vagrant
 
-disable-default:
-  cmd:
-    - wait
-    - name: a2dissite 000-default
-
 /etc/apache2/sites-available/workspace.conf:
   file.managed:
     - user: root
     - group: root
     - source: salt://dev-environment/files/vhost.workspace.conf
     - require:
-      - cmd: disable-default
+      - cmd: a2dissite 000-default
     - require_in:
       - cmd: vhost-exist
-
-a2ensite vhost.workspace:
-  cmd:
-    - wait
-    - unless: test ! -L /etc/apache2/sites-enabled/vhost.workspace.conf
+  cmd.wait:
+    - name: a2dissite 000-default
+    - unless: test -f /etc/apache2/sites-enabled/000-default

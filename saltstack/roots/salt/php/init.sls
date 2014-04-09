@@ -1,3 +1,6 @@
+include:
+  - php.composer
+
 php-basic:
   pkg:
     - installed
@@ -7,3 +10,9 @@ php-basic:
       - php5-cli
       - php-pear
       - php-db
+  file.managed:
+    - name: /etc/php5/conf.d/unicode.ini
+    - source: salt://php/files/unicode.ini
+    - mode: 644
+    - require:
+      - pkg: php5

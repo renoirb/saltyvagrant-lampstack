@@ -8,7 +8,7 @@ $network_interface = pref_interface[0]
 
 Vagrant.configure("2") do |config|
   config.vm.network :public_network, :bridge => $network_interface
-  config.vm.network :private_network, ip: "33.33.32.1"
+  config.vm.network :private_network, ip: "33.33.32.2"
   config.vm.network :forwarded_port, guest: 80, host: 8080
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "saltstack/roots/pillars",  "/srv/pillars"
 
   config.vm.provider "virtualbox" do |v|
-    v.name = "lampstack"
+    v.name = "lampstack222"
   end
 
   config.vm.provision :salt do |c|
